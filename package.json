@@ -10,6 +10,7 @@
     "generate": "next build && next export"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "axios": "^0.21.1",
     "bootstrap-icons": "^1.4.1",
     "easy-board": "^0.0.11",

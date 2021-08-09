@@ -31,6 +31,7 @@ button,
 input {
 	outline: none;
 	border: none;
+	cursor: pointer;
 }
 
 a {
@@ -50,4 +51,8 @@ canvas {
 	border: 3px dashed var(--dark-light);
 	border-radius: 3px;
 	background-color: var(--dark-hard);
+}
+main pre[class="code-blocks"] {
+	padding-left: 0.25rem !important;
+	padding-right: 0.25rem !important;
 }

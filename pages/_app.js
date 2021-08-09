@@ -9,7 +9,7 @@ const DataStructures = ({ Component, pageProps }) => (
       <Head>
          <title>Seemly - Data Estructures & Algorithms </title>
          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-         <link rel='shortcut icon' href='./favicon.svg' type='image/x-icon' />
+         <link rel='shortcut icon' href='/favicon.svg' type='svg/x-icon' />
          <link rel='preconnect' href='https://fonts.gstatic.com' />
          <link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap' rel='stylesheet' />
       </Head>

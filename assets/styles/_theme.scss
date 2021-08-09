@@ -5,9 +5,14 @@
 
 	--dark-light: #313131;
 	--link-color: #b76535;
-
+	--main-content: 100%;
 	--font-color-base: #b4b4b4;
-
-	--main-content: minmax(160px, 16%) 1fr;
 	--height-content: calc(100vh - 61px - 36px);
+	--header-height: 60px;
+}
+
+@include from($lg) {
+	:root {
+		--main-content: minmax(160px, 16%) 1fr;
+	}
 }

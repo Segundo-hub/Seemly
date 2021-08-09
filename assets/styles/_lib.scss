@@ -79,3 +79,34 @@
 		transform: rotate(360deg);
 	}
 }
+
+// LIB DESIGN BY ME
+
+.l-section {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.flex,
+.main-center,
+.center {
+	display: flex;
+}
+.main-center {
+	justify-content: center;
+}
+
+.center {
+	align-items: center;
+	align-content: center;
+}
+
+.to-left {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.to-right {
+	margin-right: 0;
+	margin-left: auto;
+}

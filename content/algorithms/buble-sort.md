@@ -3,18 +3,12 @@ title: Alex Junior
 description: Alex Segundo Blog
 ---
 
-# Hola Mundo
+# Implement in Java
 
-The amo mi lindo mundo
+```java
 
-```Java
-
-public class Stack {
-   static int Main(int argv){
-      System.out.prinln("Hola Mundo");
-      return 0;
-   }
-   static public int method () {
+public class BubleSort {
+   static public List<Array> Sort () {
 
    }
 }

@@ -1,20 +1,29 @@
-import React from 'react'
-import styles from './header.module.scss'
-import { fiMount } from './../icons/fiMount'
-import { ViewIcon } from "./../icons/ViewIcon.jsx";
-import { Title } from '../design/atoms'
+import React, { useState } from "react"
+import styles from "./header.module.scss"
+import { BurgerMenu, logoIcon } from "./../design/atoms"
+import { MainMenu } from "../design/organisms"
 
-export const Header = () => (
-	<header className={styles.header}>
-	   <nav style={{ padding: '1rem 1.5rem' }}>
-	      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-	         <h1 className={styles.title}>
-               <ViewIcon icon={fiMount} fill="teal"/>
-               <span>Seemly</span> 
-            </h1>
-            <Title title="DATA STRUCTURES & ALGORITHMS ANIMATED"/>
-	      </span>
-	   </nav>
-	</header>
-   
-)
+export const Header = () => {
+   const [open, setOpen] = useState(false)
+   const handleClick = () => {
+      setOpen(!open)
+   }
+   const handleClose = e => {
+      !e.target.closest(".menu--container * ") && setOpen(false)
+   }
+   return (
+      <>
+         <header className={`${styles.header} center`}>
+            <nav className={`${styles.nav} l-section`}>
+               <div className='center'>
+                  <BurgerMenu click={handleClick} active={open} />
+                  <span className='to-right'>
+                     <logoIcon></logoIcon>
+                  </span>
+               </div>
+            </nav>
+         </header>
+         <MainMenu open={open} $close={handleClose} type='max' />
+      </>
+   )
+}

@@ -1,1 +1,1 @@
-export const MainContent = ({ children }) => <main>{children}</main>
+export const MainContent = ({ children }) => <main className='main--wrapper'>{children}</main>

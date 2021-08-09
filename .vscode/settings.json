@@ -35,7 +35,7 @@
     },
     "editor.tabSize": 3,
     "editor.formatOnSave": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.fontFamily": "FiraCode Nerd Font",
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     "workbench.iconTheme": "material-icon-theme",

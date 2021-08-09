@@ -26,11 +26,9 @@ const Code = {
 }
 
 const DataEstructures = ({ data, mark }) => {
-   console.log(data)
    return (
       <Layout>
          <Title title={data.title} />
-         <Canvas />
          <ReactMarkdown components={Code} children={mark} />
       </Layout>
    )

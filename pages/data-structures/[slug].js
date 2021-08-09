@@ -3,12 +3,14 @@ import { Canvas } from "../../components/design/molecules"
 import { Layout } from "../../layout"
 import { getMakrdownFiles, getPathDirectories } from "../../lib/markdown"
 
+import ReactMarkdown from "react-markdown"
+import { CodeMark } from "../../components/design/organisms/CodeMark"
+
 const DataEstructures = ({ data, mark }) => {
-   console.log(data)
    return (
       <Layout>
          <Title title={data.title} />
-         <Canvas />
+         <ReactMarkdown components={CodeMark} children={mark} />
       </Layout>
    )
 }
