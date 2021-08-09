@@ -1,0 +1,184 @@
+@include from($md) {
+	::-webkit-scrollbar {
+		height: 10px;
+		width: 10px;
+		background-color: transparent;
+		&-thumb {
+			background-color: var(--dark-light);
+			border-radius: 5px;
+			transition: all 0.5s ease-in-out;
+			border: 2px solid var(--dark-soft);
+			outline: 2px solid var(--dark-soft);
+			&:hover {
+				background-color: #999898;
+			}
+		}
+		&-button {
+			background-color: transparent;
+			height: 5px;
+			width: 5px;
+		}
+	}
+}
+
+#__next {
+	display: grid;
+	height: 100vh;
+	grid-template-rows: auto 1fr auto;
+}
+
+#main--content {
+	max-height: var(--height-content);
+	display: grid;
+	grid-template-columns: var(--main-content);
+	& > main {
+		padding: 1rem;
+		max-height: inherit;
+		min-height: inherit;
+		padding-bottom: 5rem;
+		@include from($md) {
+			padding: 2rem;
+		}
+	}
+}
+
+.d-inline-b {
+	display: inline-block;
+}
+
+.md-to-right {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.off-nav-section {
+	padding: 0.9rem 1.4rem;
+	color: var(--link-color);
+}
+.dropdown--list {
+	padding: 7px 0;
+	a {
+		color: #926550;
+		display: flex;
+		padding: 12px 1rem;
+		padding-left: 3.25rem;
+		border-bottom: thin solid var(--dark-midium);
+	}
+	&\:child a {
+		padding: 0 1rem;
+	}
+}
+
+.dropdown-button {
+	display: flex;
+	border-bottom: 1px solid var(--dark-light);
+}
+.dropdown-icon {
+	transition: transform 0.25s ease-in-out;
+}
+.expanded {
+	> .dropdown-button > .dropdown-icon {
+		transform: rotate(180deg);
+	}
+	> .dropdown-button {
+		background-color: #00000027;
+	}
+}
+
+.dropdown-container {
+	overflow: hidden;
+	transition-property: min-height;
+	transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	&.expanded {
+		border-bottom: 1px solid var(--dark-light);
+	}
+}
+
+.md-cross-center {
+	align-items: center;
+}
+.a-ml-1 {
+	margin-right: 10px;
+	fill: #686868;
+}
+
+#canvas-container {
+	width: 100%;
+	height: 600px;
+}
+
+.code-blocks {
+	color: rgb(169, 183, 198);
+	font-family: "Fira Code", Monaco, "Andale Mono", monospace !important;
+	direction: ltr;
+	text-align: left;
+	font-size: 15px !important;
+	font-weight: 500;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	hyphens: none;
+	border-radius: 2px;
+	//border: 2px solid rgb(70, 69, 69);
+	padding: 0.75rem !important;
+	margin: 0.5em 0px;
+	overflow: auto;
+	background: rgb(43, 43, 43);
+	font-variant: none;
+	code {
+		font-family: inherit !important;
+	}
+}
+
+#nprogess .bar {
+	background-color: teal !important;
+}
+
+// GENERAL STYLES PURPOSE
+
+.burg {
+	position: relative;
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: transparent;
+	&__dot {
+		display: inline-block;
+		position: absolute;
+		width: 0.75rem;
+		height: 2px;
+		background-color: #686868;
+	}
+	&__dot:nth-child(odd) {
+		left: 0;
+		border-radius: 9px 0 0 9px;
+	}
+	&__dot:nth-child(even) {
+		left: 0.75rem;
+		border-radius: 0 9px 9px 0;
+	}
+	&__dot:nth-child(1),
+	&__dot:nth-child(2) {
+		top: 0.25rem;
+	}
+	&__dot:nth-child(3),
+	&__dot:nth-child(4) {
+		top: 0.7rem;
+	}
+	&__dot:nth-child(5),
+	&__dot:nth-child(6) {
+		top: 1.15rem;
+	}
+}
+
+.menu--container {
+	border-right: 1px solid var(--dark-light);
+	background-color: var(--dark-midium);
+	height: 100%;
+	width: 85%;
+	max-width: 26rem;
+	@include from($lg) {
+		width: 100%;
+	}
+}
