@@ -6,6 +6,7 @@ export const CodeMark = {
       const match = /language-(\w+)/.exec(className || "")
       return !inline && match ? (
          <SyntaxHighlighter
+            data-item='tab'
             style={theme}
             language={match[1]}
             children={String(children).replace(/\n$/, "")}

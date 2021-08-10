@@ -49,7 +49,7 @@ export const BurgerMenu = ({ click, active }) => {
    )
 }
 
-export const logoIcon = () => (
+export const LogoIcon = () => (
    <svg xmlns='http://www.w3.org/2000/svg' height='1.5rem' viewBox='0 0 512 512' width='1.5rem'>
       <g>
          <g fill='silver'>

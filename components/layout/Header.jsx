@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styles from "./header.module.scss"
-import { BurgerMenu, logoIcon } from "./../design/atoms"
+import { BurgerMenu, LogoIcon } from "./../design/atoms"
 import { MainMenu } from "../design/organisms"
 
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
                <div className='center'>
                   <BurgerMenu click={handleClick} active={open} />
                   <span className='to-right'>
-                     <logoIcon></logoIcon>
+                     <LogoIcon />
                   </span>
                </div>
             </nav>
