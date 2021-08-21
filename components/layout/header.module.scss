@@ -34,3 +34,33 @@ $dt-color: #2b3b47;
 	color: #535353;
 	padding: 0.5rem 1rem;
 }
+
+.popup {
+	background-color: #232f38;
+	width: 90%;
+	margin: 2rem auto;
+	border-radius: 6px;
+	max-width: 700px;
+	padding: 1.5rem;
+	text-align: center;
+	h3 {
+		color: tan;
+		font-size: 1.75rem;
+		padding-bottom: 1rem;
+	}
+	p {
+		font-size: 1.25rem;
+		padding-bottom: 1rem;
+	}
+}
+.dismiss {
+	padding: 0.5rem 1rem;
+	background-color: teal;
+	border-radius: 3px;
+	color: #f1eae0;
+	font-weight: 500;
+	transition: transform 0.35s ease;
+	&:hover {
+		transform: scaleX(1.1);
+	}
+}

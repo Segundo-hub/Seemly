@@ -1,21 +1,22 @@
-
-import { createStore } from 'redux'
+import { createStore } from "redux"
 
 const initialState = {
    estructures: [
       {
-         type: '',
-         data: '',
-      }
-   ]
+         type: "",
+         data: "",
+      },
+   ],
+   show: true,
 }
 
-
-const reduceEstructures = (state = initialState, action ) => {
-   switch (action.type){
-      case 'SET_PRODUCTS':
-         return { ...state, estructures: action.payload }
-      default: 
+const reduceEstructures = (state = initialState, { type, payload }) => {
+   switch (type) {
+      case "SET_PRODUCTS":
+         return { ...state, estructures: payload }
+      case "SET_SHOW":
+         return { ...state, show: payload }
+      default:
          return state
    }
 }

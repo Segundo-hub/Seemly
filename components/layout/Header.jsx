@@ -23,7 +23,7 @@ export const Header = () => {
                </div>
             </nav>
          </header>
-         <MainMenu open={open} $close={handleClose} type='max' />
+         <MainMenu open={open} onClose={handleClose} type='max' />
       </>
    )
 }
