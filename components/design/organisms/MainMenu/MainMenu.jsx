@@ -1,17 +1,16 @@
-import { useEffect } from "react"
 import { useMediaQuery } from "../../../hooks/useMedia"
 import { LogoIcon } from "../../atoms"
 import { Menu } from "../../molecules/Menu/Menu"
 import style from "./m.module.scss"
 
-const MenuSidebar = ({ open, $close, type }) => {
+const MenuSidebar = ({ open, onClose, type }) => {
    const media = useMediaQuery(`(${type}-width: 992px)`)
    return (
       <>
          {media && (
             <aside
                className={`${style.menu} ${open ? style["active"] : ""} ${type == "min" ? style["desktop"] : ""}`}
-               onClick={$close}
+               onClick={onClose}
             >
                <div className='menu--container'>
                   <div className='center brand--caption'>

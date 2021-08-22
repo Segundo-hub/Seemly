@@ -1,2 +1,0 @@
-name: build and deploy seemly app
-on: [push]
