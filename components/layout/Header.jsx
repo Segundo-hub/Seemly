@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { Fragment, useState } from "react"
 import styles from "./header.module.scss"
 import { BurgerMenu, LogoIcon } from "./../design/atoms"
 import { MainMenu } from "../design/organisms"
@@ -12,7 +12,7 @@ export const Header = () => {
       !e.target.closest(".menu--container * ") && setOpen(false)
    }
    return (
-      <>
+      <Fragment>
          <header className={`${styles.header} center`}>
             <nav className={`${styles.nav} l-section`}>
                <div className='center'>
@@ -24,6 +24,6 @@ export const Header = () => {
             </nav>
          </header>
          <MainMenu open={open} onClose={handleClose} type='max' />
-      </>
+      </Fragment>
    )
 }
