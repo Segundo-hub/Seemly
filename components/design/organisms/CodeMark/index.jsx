@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import theme from "./../../../../lib/other/theme.js"
 

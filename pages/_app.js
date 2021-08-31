@@ -1,11 +1,10 @@
+import "~/styles/globals.scss"
 import Head from "next/head"
-import { Fragment } from "react"
-import "./../assets/styles/globals.scss"
 import NProgress from "nprogress"
 import Router from "next/router"
 
-const DataStructures = ({ Component, pageProps }) => (
-   <Fragment>
+const CodeSeemly = ({ Component, pageProps }) => (
+   <>
       <Head>
          <title>Seemly - Data Estructures & Algorithms </title>
          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -18,7 +17,7 @@ const DataStructures = ({ Component, pageProps }) => (
          />
       </Head>
       <Component {...pageProps} />
-   </Fragment>
+   </>
 )
 
 NProgress.configure({
@@ -32,4 +31,4 @@ Router.events.on("routeChangeStart", () => NProgress.start())
 Router.events.on("routeChangeComplete", () => NProgress.done())
 Router.events.on("routeChangeError", () => NProgress.done())
 
-export default DataStructures
+export default CodeSeemly

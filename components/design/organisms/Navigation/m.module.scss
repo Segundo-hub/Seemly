@@ -1,0 +1,51 @@
+@import "./../../../../assets/styles/settings";
+
+.menu {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	transform: translateX(-100vw);
+	transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+	background-color: var(--dark-midium);
+	z-index: 2;
+	&.active {
+		transform: translateX(0);
+	}
+	@include from($lg) {
+		transform: translateX(0);
+		width: var(--sidebar-width);
+	}
+	@include to($lg) {
+		width: 80%;
+		max-width: 20rem;
+	}
+}
+
+.nav {
+	width: 100%;
+}
+
+.header {
+	height: var(--header-height);
+	top: 0;
+	background-color: var(--dark-midium);
+	position: fixed;
+	right: 0;
+	left: 0;
+	@include from($md) {
+		border-bottom: thin solid var(--dark-light);
+	}
+	@include from($lg) {
+		left: var(--sidebar-width);
+		background-color: var(--dark-hard-alt);
+	}
+}
+.aside {
+	@include from($lg) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: var(--sidebar-width);
+	}
+}

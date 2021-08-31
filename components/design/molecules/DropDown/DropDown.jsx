@@ -1,14 +1,19 @@
-const { useState } = require("react")
+const { useState, useRef } = require("react")
 const { NextLink } = require("../../atoms")
 
-const ExpanBtn = ({ icon, path, link, children, height }) => {
+const ExpanBtn = ({ icon, path, link, children }) => {
    const [active, setActive] = useState(false)
+   const [height, setHeight] = useState(0)
+   const content = useRef(null)
+
    const handleClick = () => {
       setActive(!active)
+      setHeight(content.current.scrollHeight)
    }
 
    const styles = {
-      height: active ? 14 + height + "px" : 0,
+      height: active ? height + "px" : 0,
+      overflow: "hidden",
    }
 
    return (
@@ -21,9 +26,11 @@ const ExpanBtn = ({ icon, path, link, children, height }) => {
             variant='dropdown'
             text={link}
          />
-         <ul className={`dropdown-container ${active ? "expanded" : "close"}`} style={styles}>
-            {children}
-         </ul>
+         <li style={styles} className='animate-dropadown'>
+            <ul className={`dropdown-container ${active ? "expanded" : "close"}`} ref={content}>
+               {children}
+            </ul>
+         </li>
       </>
    )
 }

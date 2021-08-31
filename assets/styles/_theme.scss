@@ -1,7 +1,10 @@
+@use 'sass:color';
+@use 'sass:math';
 :root {
 	--dark-soft: #191c1d;
-	--dark-hard: #131516;
-	--dark-midium: #1c2022;
+	--dark-hard-alt: #131516;
+	--dark-hard: #{color.scale(#131516, $lightness: 3%)};
+	--dark-midium: #{color.scale(#1c2022, $lightness: 1%)};
 
 	--dark-light: #313131;
 	--link-color: #b76535;
@@ -14,5 +17,37 @@
 @include from($lg) {
 	:root {
 		--main-content: minmax(250px, 15%) 1fr;
+		--sidebar-width: 21rem;
+		--header-height: 4rem;
+		--l-padding: 2rem;
 	}
+}
+
+$dark: #191c1d;
+$primary: #00a5ce;
+$brand: #008080;
+$theme: (
+	brand: $brand,
+	dark: $dark,
+	primary: $primary,
+	second: color.complement($primary),
+	third: color.adjust($primary, $hue: 180deg),
+);
+
+@mixin gen-shade($color, $name, $amount: 5%, $to: 100%, $size: 9) {
+	@for $i from 1 through $size {
+		// gen root color
+		$root: color.scale($color, $lightness: $i * $amount);
+		--#{$name}-#{$size - $i + 1}00: #{$root};
+	}
+}
+
+:root {
+	$brand: map-get($theme, dark);
+	@include gen-shade($brand, "grey");
+}
+
+body {
+	margin-top: var(--header-height);
+	padding-left: var(--sidebar-width);
 }

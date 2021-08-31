@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import styles from "./header.module.scss"
+import styles from "./ly.module.scss"
 
 const InformationTemplate = ({ title, discription, setShowing, show }) =>
    show && (

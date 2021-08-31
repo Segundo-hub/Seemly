@@ -2,34 +2,11 @@ $color: #23292f;
 $dark--color: #212e36;
 $dt-color: #2b3b47;
 
-@import "./../../assets/styles/settings";
+@import "~/styles/settings";
 
-.title {
-	font-weight: 500;
-	color: #9db1b1;
-	align-items: center;
-	display: inline-flex;
-	span {
-		padding-left: 0.75rem;
-	}
-}
-
-.header,
 .footer {
 	background-color: var(--dark-midium);
 	position: sticky;
-}
-.nav {
-	width: 100%;
-}
-.header {
-	height: var(--header-height);
-	top: 0;
-	@include from($md) {
-		border-bottom: thin solid var(--dark-light);
-	}
-}
-.footer {
 	bottom: 0;
 	color: #535353;
 	padding: 0.5rem 1rem;

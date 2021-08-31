@@ -1,11 +1,10 @@
 import { Title } from "components/design/atoms"
 import { Layout } from "layout"
 import { getMarkdownFiles, getPathDirectories } from "lib/markdown"
-
 import ReactMarkdown from "react-markdown"
 import { CodeMark } from "components/design/organisms/CodeMark"
 
-const AlgorithmsSlug = ({ data, mark }) => {
+const DataEstructures = ({ data, mark }) => {
    return (
       <Layout>
          <Title title={data.title} />
@@ -18,7 +17,7 @@ const AlgorithmsSlug = ({ data, mark }) => {
 
 export async function getStaticProps({ params }) {
    const { slug } = params
-   const { mark, data } = getMarkdownFiles({ directory: "algorithms", file: slug })
+   const { mark, data } = getMarkdownFiles({ directory: "design-patterns", file: slug })
    return {
       props: {
          data,
@@ -28,7 +27,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-   const { dir } = getPathDirectories({ directory: "algorithms" })
+   const { dir } = getPathDirectories({ directory: "design-patterns" })
    const paths = dir.map(el => ({ params: { slug: el.replace(/\.md$/, "") } }))
    return {
       paths,
@@ -36,4 +35,4 @@ export async function getStaticPaths() {
    }
 }
 
-export default AlgorithmsSlug
+export default DataEstructures

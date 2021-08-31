@@ -1,3 +1,3 @@
 module.exports = {
-   MainMenu: require("./MainMenu/MainMenu.jsx"),
+   MainMenu: require("./Navigation/MenuSidebar.jsx"),
 }
