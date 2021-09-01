@@ -80,11 +80,28 @@
 	}
 }
 
+.code-blocks {
+	color: rgb(169, 183, 198);
+	font-family: "Fira Code", Monaco, "Andale Mono", monospace !important;
+	direction: ltr;
+	font-size: 15px !important;
+	font-weight: 500;
+	border-radius: 0.25rem;
+	padding: 0.75rem !important;
+	margin: 0.5em 0px;
+	overflow: auto;
+	background: var(--grey-900);
+	font-variant: none;
+	code {
+		font-family: inherit !important;
+	}
+}
+
 // LIB DESIGN BY ME
 
 .l-section {
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	padding-left: var(--l-padding, 1.25rem);
+	padding-right: var(--l-padding, 1.25rem);
 }
 
 .flex,

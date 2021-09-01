@@ -24,7 +24,6 @@
 .principal_t {
 	color: tan;
 	padding: 1rem 0;
-	text-align: center;
 }
 
 .link {
@@ -37,4 +36,22 @@
 	a {
 		width: inherit;
 	}
+}
+
+.typeContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem 1rem;
+	align-items: center;
+	transition: transform 240ms;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+.typeName {
+	font-size: 1.25rem;
+	color: #c39074;
+	font-family: "Fira Code";
+	font-weight: 700;
+	margin-top: 0.75rem;
 }

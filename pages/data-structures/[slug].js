@@ -1,23 +1,24 @@
-import { Title } from "../../components/design/atoms"
-import { Canvas } from "../../components/design/molecules"
-import { Layout } from "../../layout"
-import { getMakrdownFiles, getPathDirectories } from "../../lib/markdown"
+import { Title } from "components/design/atoms"
+import { Layout } from "layout"
+import { getMarkdownFiles, getPathDirectories } from "lib/markdown"
 import ReactMarkdown from "react-markdown"
-import { CodeMark } from "../../components/design/organisms/CodeMark"
+import { CodeMark } from "components/design/organisms/CodeMark"
 
 const DataEstructures = ({ data, mark }) => {
    return (
       <Layout>
          <Title title={data.title} />
 
-         <ReactMarkdown components={CodeMark} children={mark} />
+         <section className='l-section'>
+            <ReactMarkdown components={CodeMark} children={mark} />
+         </section>
       </Layout>
    )
 }
 
 export async function getStaticProps({ params }) {
    const { slug } = params
-   const { mark, data } = getMakrdownFiles({ directory: "data-structures", file: slug })
+   const { mark, data } = getMarkdownFiles({ directory: "data-structures", file: slug })
    return {
       props: {
          data,
