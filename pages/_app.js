@@ -15,6 +15,12 @@ const CodeSeemly = ({ Component, pageProps }) => (
             href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Lato:ital,wght@0,300;0,400;1,400&family=Roboto:wght@400;500;700&display=swap'
             rel='stylesheet'
          />
+         <script
+            async
+            defer
+            crossorigin='anonymous'
+            src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0'
+         ></script>
       </Head>
       <Component {...pageProps} />
    </>
